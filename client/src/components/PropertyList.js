@@ -16,8 +16,9 @@ const PropertyList = ({ onDeleteProperty, properties, onContactOwner }) => {
             <p>Description: {property.description}</p>
             <p>Contact: {property.contact} </p>
             <div>
-              <img src={property.image}
-                alt="Post Media"
+              <img src={property.image/*https://cultureatlas.vercel.app/Thumbnails/audio.jpg*/}
+                alt="property image"
+
               />
             </div>
             <div
@@ -28,8 +29,8 @@ const PropertyList = ({ onDeleteProperty, properties, onContactOwner }) => {
                 alignItems: "center",
               }}
             >
-              <button onClick={() => onContactOwner(property.contact)}>Contact Owner</button>
-              <button onClick={() => onDeleteProperty(property._id)}>Delete Property</button>
+              <button className="property-card button" onClick={() => onContactOwner(property.contact)}>Contact Owner</button>
+              <button className="property-card button" onClick={() => onDeleteProperty(property._id)}>Delete Property</button>
             </div>
           </div>
         ))
